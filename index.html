@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Calculator — Direct Watts Interns</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a2e0e6a91f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1><i class="fa-solid fa-solar-panel"></i> Solar Calculator</h1>
+      <p class="subtitle">Built by <strong>Shivanshu Pokhriyal</strong> — Direct Watts Interns ⚡</p>
+    </header>
+
+    <section class="card inputs">
+      <label>
+        <i class="fa-solid fa-bolt"></i> Monthly Electricity Bill (₹)
+        <input id="monthlyBill" type="number" placeholder="e.g., 2500">
+      </label>
+
+      <label>
+        <i class="fa-solid fa-sun"></i> Average Sunlight Hours per Day
+        <input id="sunHours" type="number" placeholder="e.g., 5">
+      </label>
+
+      <label>
+        <i class="fa-solid fa-coins"></i> Cost per Watt (₹)
+        <input id="costPerWatt" type="number" value="55">
+      </label>
+
+      <label>
+        <i class="fa-solid fa-solar-panel"></i> Panel Wattage (W)
+        <input id="panelWatt" type="number" value="350">
+      </label>
+
+      <label>
+        <i class="fa-solid fa-battery-full"></i> Electricity Rate (₹/unit)
+        <input id="unitRate" type="number" value="8">
+      </label>
+
+      <div class="actions">
+        <button id="calculateBtn"><i class="fa-solid fa-calculator"></i> Calculate</button>
+        <button id="resetBtn" class="muted"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+      </div>
+    </section>
+
+    <section class="card results">
+      <h2><i class="fa-solid fa-chart-line"></i> Results</h2>
+      <div class="result-row"><span>Estimated System Size</span><strong id="systemSize">— kW</strong></div>
+      <div class="result-row"><span>Approx. Number of Panels</span><strong id="panels">—</strong></div>
+      <div class="result-row"><span>Total System Cost</span><strong id="totalCost">— ₹</strong></div>
+      <p id="savings" class="savings">A <span id="roundedKW">—</span> kW system can save around ₹<span id="saveAmt">—</span> /month.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
